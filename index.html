@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!--required meta--> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>"Which creature are you?" JavaScript Quiz</title>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+    
+      <div id="background-image" class="justify-content-center">
+        <img src="Images/trees.jpg" alt="A picture of a spooky forrest.">
+      </div>
+
+      <div class="wrapper"> 
+        <ul class="fireflies">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div id="quizarea">
+        <div id="title" >
+          <div class="col">
+            <h1 class="text-center">Which creature are you?</h1>
+          </div>
+        </div>
+
+        <div id="questionarea">
+            <!--intro content-->
+            <div id="intro" class="justify-content-center mx-auto">
+              <br />
+              <h3 class="text-center"><i>Find out whether you are a vampire, witch or daemon...</i></h3>
+              <br />
+              <p class="text-center">This is a quiz created just for fun, loosely based on the TV series <i>A Discovery of Witches</i></p>
+              <img src="Images/alchemy.jpg" alt="An alchemy scene" height="155px" width="200px">
+              <img src="Images/magic.jpg" alt="An image of a book of spells" height="155px" width="200px">
+              <img src="Images/candles.jpg" alt="An image of candles and pumpkins" height="155px" width="200px">
+              <br /><br />
+              <input type="button" value="Start Quiz" class="btn btn-secondary text-center" onclick="startQuiz()"/>
+            </div>
+            <form id="quizform">
+            <!--question 1-->
+            <div id="question1" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+                <h5 class="text-center">Question (1/6)</h5> 
+              </div> 
+              <div class="row justify-content-center">
+                <h2>Where would you rather live?</h2>
+              </div>
+              <div class="row">
+                <div class="card-columns">
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a1'>
+                      <p class="card-text"><img src="Images/castle.jpg" alt="A picture of a medieval castle" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest1" id="a1" value=1 onclick="question2()"/>
+                        <label for="a1" class="text-center">Medieval Castle</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a2'>
+                      <p class="card-text"><img src="Images/house.jpg" alt="A picture of a woodland house" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest1" id="a2" value=2 onclick="question2()"/>
+                        <label for="a2" class="text-center">Woodland House</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a3'>
+                      <p class="card-text"><img src="Images/manor.jpg" alt="A picture of a country manor" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest1" id="a3" value=3 onclick="question2()"/>
+                        <label for="a3" class="text-center">Country Manor</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question2()"/>
+              </div>
+            </div>
+            <!--question 2-->
+            <div id="question2" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="16.6" aria-valuemin="0" aria-valuemax="100" style="width: 16.6%"></div>
+                </div>
+                <h5 class="text-center">Question (2/6)</h5> 
+              </div> 
+              <div class="row justify-content-center">
+                <h2>Where would you rather work?</h2>
+              </div>
+              <div class="row">
+                <div class="card-columns">
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a4'>
+                      <p class="card-text"><img src="Images/laboratory.jpg" alt="A picture a laboratory" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest2" id="a4" value=1 onclick="question3()"/>
+                        <label for="a4" class="text-center">Laboratory</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a5'>
+                      <p class="card-text"><img src="Images/library.jpg" alt="A picture of a library" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest2" id="a5" value=2 onclick="question3()"/>
+                        <label for="a5" class="text-center">Library</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a6'>
+                      <p class="card-text"><img src="Images/office.jpg" alt="A picture of an office" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest2" id="a6" value=3 onclick="question3()"/>
+                        <label for="a6" class="text-center">Office</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question3()"/>
+              </div>
+            </div>
+            <!--question 3-->
+            <div id="question3" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%"></div>
+                </div>
+                <h5 class="text-center">Question (3/6)</h5> 
+              </div> 
+              <div class="row justify-content-center">
+                <h2>Which field of study are you most drawn to?</h2>
+              </div>
+              <div class="row">
+                <div class="card-columns">
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a7'>
+                      <p class="card-text"><img src="Images/medicine.jpg" alt="A picture of a human ribcage" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest3" id="a7" value=1 onclick="question4()"/>
+                        <label for="a7" class="text-center">Medicine</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a8'>
+                      <p class="card-text"><img src="Images/history.jpg" alt="A picture of history books" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest3" id="a8" value=2 onclick="question4()"/>
+                        <label for="a8" class="text-center">History</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a9'>
+                      <p class="card-text"><img src="Images/maths.jpg" alt="A picture of a calculator" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest3" id="a9" value=3 onclick="question4()"/>
+                        <label for="a9" class="text-center">Maths</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question4()"/>
+              </div>
+            </div>
+            <!--question 4-->
+            <div id="question4" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                </div>
+                <h5 class="text-center">Question (4/6)</h5> 
+              </div> 
+              <div class="row justify-content-center">
+                <h2>Which superpower would you like to have?</h2>
+              </div>
+              <div class="row">
+                <div class="card-columns">
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a10'>
+                      <p class="card-text"><img src="Images/immortality.jpg" alt="A picture of an egg timer" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest4" id="a10" value=1 onclick="question5()"/>
+                        <label for="a10" class="text-center">Immortality</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a11'>
+                      <p class="card-text"><img src="Images/psychic.jpg" alt="A picture of a crystal ball" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest4" id="a11" value=2 onclick="question5()"/>
+                        <label for="a11" class="text-center">Psychic Abilities</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a12'>
+                      <p class="card-text"><img src="Images/intelligence.jpg" alt="A picture of a static ball" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest4" id="a12" value=3 onclick="question5()"/>
+                        <label for="a12" class="text-center">High Intelligence</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question5()"/>
+              </div>
+            </div>
+            <!--question 5-->
+            <div id="question5" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="66.6" aria-valuemin="0" aria-valuemax="100" style="width: 66.6%"></div>
+                </div>
+                <h5 class="text-center">Question (5/6)</h5> 
+              </div> 
+              <div class="row justify-content-center">
+                <h2>How would you describe yourself?</h2>
+              </div>
+              <div class="row">
+                <div class="card-columns">
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a13'>
+                      <p class="card-text"><img src="Images/sophisticated.jpg" alt="A picture a man wearing a suit" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest5" id="a13" value=1 onclick="question6()"/>
+                        <label for="a13" class="text-center">Sophisticated</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a14'>
+                      <p class="card-text"><img src="Images/organised.jpg" alt="A picture of post-it notes" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest5" id="a14" value=2 onclick="question6()"/>
+                        <label for="a14" class="text-center">Organised</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a15'>
+                      <p class="card-text"><img src="Images/creative.jpg" alt="A picture of a paint brushes" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest5" id="a15" value=3 onclick="question6()"/>
+                        <label for="a15" class="text-center">Creative</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question6()"/>
+              </div>
+            </div>
+            <!--question 6-->
+            <div id="question6" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="83.3" aria-valuemin="0" aria-valuemax="100" style="width: 83.3%"></div>
+                </div>
+                <h5 class="text-center">Question (6/6)</h5> 
+              </div> 
+              <div class="row justify-content-center">
+                <h2>How do you like to spend your free time?</h2>
+              </div>
+              <div class="row">
+                <div class="card-columns">
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a16'>
+                      <p class="card-text"><img src="Images/travel.jpg" alt="A picture a map and different currencies" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest6" id="a16" value=1>
+                        <label for="a16" class="text-center">Travelling</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a17'>
+                      <p class="card-text"><img src="Images/nature.jpg" alt="A picture of trees in a forrest" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest6" id="a17" value=2>
+                        <label for="a17" class="text-center">Spending time in nature</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary">
+                    <div class="card-body text-center">
+                      <label for='a18'>
+                      <p class="card-text"><img src="Images/live.jpg" alt="A picture of a live performance" height="155px" width="200px"> </p>
+                      </label>
+                      <div class="row justify-content-center">
+                        <input type="radio" name="quest6" id="a18" value=3>
+                        <label for="a18" class="text-center">Attending gigs/festivals</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Results" class="btn btn-secondary mx-auto" onclick="results()"/>
+              </div>
+            </div>
+            </form>
+
+            <!--Results-->
+            <div id="results" class="justify-content-center mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>
+              &nbsp;
+              </div>
+              <h3 class="text-center"><i>Your Result:</i></h3>
+              <div>
+                <p class="text-center" id="result"></p>
+                <img src="Images/woodland.jpg" alt="A picture of a mystical woodland" height="155px" width="250px">
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- link to external JavaScript-->
+    <script src="code.js" type="text/javascript"></script>
+
+  </body>
+</html>

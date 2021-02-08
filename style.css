@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat@display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+text-align: center;
+font-family: 'Montserrat', sans-serif;
+}
+
+#background-image {
+  display: flex;
+}
+
+ul.fireflies{list-style:none}
+li{
+	background-size: cover;
+	background-image: url(http://i.imgur.com/aa7Rw.png);
+	width:21px; 
+	top:-20px;
+	height:21px;
+	position:absolute;
+	animation: 
+		leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+		updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1)
+}
+li:nth-of-type(2){
+animation-delay:4s;
+animation-duration:17s, 8s;
+	animation-fill-mode:backwards, backwards 
+}
+li:nth-of-type(3){
+animation-delay:1.5s;
+animation-duration:14s, 7s;
+animation-fill-mode:backwards, backwards
+}
+li:nth-of-type(4){
+animation-delay:5.5s;
+animation-duration:10s, 13s;
+}
+li:nth-of-type(5){
+animation-fill-mode:backwards, backwards;
+animation-duration:12s, 15s;
+}
+
+@keyframes leftright {
+  0%, 100%{left:20%;}
+	16.666%	{left:90%;}
+	33.333% {left:10%;}
+	50%			{left:50%;}
+  66.666%	{left:70%;}
+	83.333% {left:40%;}
+}
+
+@keyframes updown {
+  0%, 100%{top:0px;width:20px;height:20px}
+  25%{top:70%; }
+	50%{top:50%;width:30px;height:30px}
+	75%{top:70%;width:10px;height:10px }
+}
+
+#question1, #question2, #question3, #question4, #question5, #question6, #results {
+  display:none;
+  width:750px;
+}
+
+#quizarea {
+  padding-top: 3%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height:500px;
+  width:800px;
+  background-color: #ccc;
+  border-radius: 20px;
+  opacity: 90%
+}
+
+.progress {
+  height: 20px;
+  width: 789px;
+  margin: 0.75%;
+  background: #565ed3;
+  border-radius: 20px;
+}
+
+.btn {
+  background-color: #31367c;
+}
+
+label  {
+  color: white;
+  border-radius:8px;   
+  cursor:pointer;
+}
+
+.card-columns {
+  display: flex;
+}
+
+label:hover {
+  background:#bbb;  
+}
+
+input {
+  margin-right:1em;   
+}
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2.5px solid grey;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #31367c;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
