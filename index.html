@@ -40,6 +40,7 @@
         </div>
 
         <div id="questionarea">
+
             <!--intro content-->
             <div id="intro" class="justify-content-center mx-auto">
               <br />
@@ -50,11 +51,12 @@
               <img src="Images/magic.jpg" alt="An image of a book of spells" height="155px" width="200px">
               <img src="Images/candles.jpg" alt="An image of candles and pumpkins" height="155px" width="200px">
               <br /><br />
-              <input type="button" value="Start Quiz" class="btn btn-secondary text-center" onclick="startQuiz()"/>
+              <input type="button" value="Start Quiz" class="btn btn-secondary text-center" onclick="question('intro','q1')"/>
             </div>
             <form id="quizform">
+
             <!--question 1-->
-            <div id="question1" class="mx-auto">
+            <div id="q1" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
@@ -72,7 +74,7 @@
                       <p class="card-text"><img src="Images/castle.jpg" alt="A picture of a medieval castle" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest1" id="a1" value=1 onclick="question2()"/>
+                        <input type="radio" name="quest1" id="a1" value=1 onclick="question('q1','q2')"/>
                         <label for="a1" class="text-center">Medieval Castle</label>
                       </div>
                     </div>
@@ -83,7 +85,7 @@
                       <p class="card-text"><img src="Images/house.jpg" alt="A picture of a woodland house" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest1" id="a2" value=2 onclick="question2()"/>
+                        <input type="radio" name="quest1" id="a2" value=2 onclick="question('q1','q2')"/>
                         <label for="a2" class="text-center">Woodland House</label>
                       </div>
                     </div>
@@ -94,7 +96,7 @@
                       <p class="card-text"><img src="Images/manor.jpg" alt="A picture of a country manor" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest1" id="a3" value=3 onclick="question2()"/>
+                        <input type="radio" name="quest1" id="a3" value=3 onclick="question('q1','q2')"/>
                         <label for="a3" class="text-center">Country Manor</label>
                       </div>
                     </div>
@@ -102,11 +104,12 @@
                 </div>
                 </div>
               <div class="row" class="justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question2()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q1','q2')"/>
               </div>
             </div>
+
             <!--question 2-->
-            <div id="question2" class="mx-auto">
+            <div id="q2" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="16.6" aria-valuemin="0" aria-valuemax="100" style="width: 16.6%"></div>
@@ -124,7 +127,7 @@
                       <p class="card-text"><img src="Images/laboratory.jpg" alt="A picture a laboratory" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest2" id="a4" value=1 onclick="question3()"/>
+                        <input type="radio" name="quest2" id="a4" value=1 onclick="question('q2','q3')"/>
                         <label for="a4" class="text-center">Laboratory</label>
                       </div>
                     </div>
@@ -135,7 +138,7 @@
                       <p class="card-text"><img src="Images/library.jpg" alt="A picture of a library" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest2" id="a5" value=2 onclick="question3()"/>
+                        <input type="radio" name="quest2" id="a5" value=2 onclick="question('q2','q3')"/>
                         <label for="a5" class="text-center">Library</label>
                       </div>
                     </div>
@@ -146,7 +149,7 @@
                       <p class="card-text"><img src="Images/office.jpg" alt="A picture of an office" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest2" id="a6" value=3 onclick="question3()"/>
+                        <input type="radio" name="quest2" id="a6" value=3 onclick="question('q2','q3')"/>
                         <label for="a6" class="text-center">Office</label>
                       </div>
                     </div>
@@ -154,11 +157,12 @@
                 </div>
                 </div>
               <div class="row" class="justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question3()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q2','q3')"/>
               </div>
             </div>
+
             <!--question 3-->
-            <div id="question3" class="mx-auto">
+            <div id="q3" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%"></div>
@@ -176,7 +180,7 @@
                       <p class="card-text"><img src="Images/medicine.jpg" alt="A picture of a human ribcage" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest3" id="a7" value=1 onclick="question4()"/>
+                        <input type="radio" name="quest3" id="a7" value=1 onclick="question('q3','q4')"/>
                         <label for="a7" class="text-center">Medicine</label>
                       </div>
                     </div>
@@ -187,7 +191,7 @@
                       <p class="card-text"><img src="Images/history.jpg" alt="A picture of history books" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest3" id="a8" value=2 onclick="question4()"/>
+                        <input type="radio" name="quest3" id="a8" value=2 onclick="question('q3','q4')"/>
                         <label for="a8" class="text-center">History</label>
                       </div>
                     </div>
@@ -198,7 +202,7 @@
                       <p class="card-text"><img src="Images/maths.jpg" alt="A picture of a calculator" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest3" id="a9" value=3 onclick="question4()"/>
+                        <input type="radio" name="quest3" id="a9" value=3 onclick="question('q3','q4')"/>
                         <label for="a9" class="text-center">Maths</label>
                       </div>
                     </div>
@@ -206,11 +210,12 @@
                 </div>
                 </div>
               <div class="row" class="justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question4()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q3','q4')"/>
               </div>
             </div>
+
             <!--question 4-->
-            <div id="question4" class="mx-auto">
+            <div id="q4" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
@@ -228,7 +233,7 @@
                       <p class="card-text"><img src="Images/immortality.jpg" alt="A picture of an egg timer" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest4" id="a10" value=1 onclick="question5()"/>
+                        <input type="radio" name="quest4" id="a10" value=1 onclick="question('q4','q5')"/>
                         <label for="a10" class="text-center">Immortality</label>
                       </div>
                     </div>
@@ -239,7 +244,7 @@
                       <p class="card-text"><img src="Images/psychic.jpg" alt="A picture of a crystal ball" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest4" id="a11" value=2 onclick="question5()"/>
+                        <input type="radio" name="quest4" id="a11" value=2 onclick="question('q4','q5')"/>
                         <label for="a11" class="text-center">Psychic Abilities</label>
                       </div>
                     </div>
@@ -250,7 +255,7 @@
                       <p class="card-text"><img src="Images/intelligence.jpg" alt="A picture of a static ball" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest4" id="a12" value=3 onclick="question5()"/>
+                        <input type="radio" name="quest4" id="a12" value=3 onclick="question('q4','q5')"/>
                         <label for="a12" class="text-center">High Intelligence</label>
                       </div>
                     </div>
@@ -258,11 +263,12 @@
                 </div>
                 </div>
               <div class="row" class="justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question5()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q4','q5')"/>
               </div>
             </div>
+
             <!--question 5-->
-            <div id="question5" class="mx-auto">
+            <div id="q5" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="66.6" aria-valuemin="0" aria-valuemax="100" style="width: 66.6%"></div>
@@ -280,7 +286,7 @@
                       <p class="card-text"><img src="Images/sophisticated.jpg" alt="A picture a man wearing a suit" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest5" id="a13" value=1 onclick="question6()"/>
+                        <input type="radio" name="quest5" id="a13" value=1 onclick="question('q5','q6')"/>
                         <label for="a13" class="text-center">Sophisticated</label>
                       </div>
                     </div>
@@ -291,7 +297,7 @@
                       <p class="card-text"><img src="Images/organised.jpg" alt="A picture of post-it notes" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest5" id="a14" value=2 onclick="question6()"/>
+                        <input type="radio" name="quest5" id="a14" value=2 onclick="question('q5','q6')"/>
                         <label for="a14" class="text-center">Organised</label>
                       </div>
                     </div>
@@ -302,7 +308,7 @@
                       <p class="card-text"><img src="Images/creative.jpg" alt="A picture of a paint brushes" height="155px" width="200px"> </p>
                       </label>
                       <div class="row justify-content-center">
-                        <input type="radio" name="quest5" id="a15" value=3 onclick="question6()"/>
+                        <input type="radio" name="quest5" id="a15" value=3 onclick="question('q5','q6')"/>
                         <label for="a15" class="text-center">Creative</label>
                       </div>
                     </div>
@@ -310,11 +316,12 @@
                 </div>
                 </div>
               <div class="row" class="justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question6()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q5','q6')"/>
               </div>
             </div>
+
             <!--question 6-->
-            <div id="question6" class="mx-auto">
+            <div id="q6" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="83.3" aria-valuemin="0" aria-valuemax="100" style="width: 83.3%"></div>
@@ -362,7 +369,7 @@
                 </div>
                 </div>
               <div class="row" class="justify-content-center">
-                <input type="button" value="Results" class="btn btn-secondary mx-auto" onclick="results()"/>
+                <input type="button" value="Results" class="btn btn-secondary mx-auto" onclick="results('q6','result')"/>
               </div>
             </div>
             </form>
