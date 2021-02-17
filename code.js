@@ -78,12 +78,16 @@ function calculateResults() {
   
   if (result > 2)  {
     msg = "You are a DAEMON. An artistic creature who lives life chaotically, your strongest characteristic is your awe-inspiring creativity. Gifted, unpredicatable and with a touch of madness, your passions are all-consuming, you live life vividly and exist as a square peg in a round world. You struggle with monotony and the drudgery of day-to-day life."; 
+    document.getElementById("resultsImg1").style.display = 'inline-block';
   } else if (result >= 1.5) {
     msg = "You are a WITCH. A creature who has inherited supernatural powers from the past and brings them to the present day. Highly practical and organised, you can perform magic using spells and herbs, harnessing the power of nature. Neither uniformaly good, nor uniformly evil, each witch is distinctly individual and makes their own choice about the path to follow.";
+    document.getElementById("resultsImg2").style.display = 'inline-block';
   } else if (result >= 0.5) {
     msg = "You are a VAMPIRE. The most elegant and disciplined of all the creatures, you are famed for your stunning beauty, charm, and powers of persuasion. Although you have a dark side, you are extraordinarily good at social shapeshifting and can easily adapt to changing circumstances and new experiences such as moving to another country, learning different languages, and forming relationships with others.";
+    document.getElementById("resultsImg3").style.display = 'inline-block';
   } else {
-    msg = "Unable to provide an accurate result. Please refresh the page and re-take the quiz.";
+    msg = "Unable to provide an accurate result. Please re-take the quiz.";
+    document.getElementById("resultsImg4").style.display = 'inline-block';
   }
   document.getElementById("result").innerHTML = msg
 }
