@@ -61,7 +61,7 @@ animation-duration:12s, 15s;
 	75%{top:70%;width:10px;height:10px }
 }
 
-#q1, #q2, #q3, #q4, #q5, #q6, #results {
+.qs {
   display:none;
   width:750px;
 }
